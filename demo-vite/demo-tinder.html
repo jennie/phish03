@@ -6,56 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Phish Season 3</title>
   </head>
-  <script>
-    // Define the JSON object
-    let slidesData = [
-      {
-        question:
-          'Logging into your laptop for the day, a MFA pop-up appears, asking you to input the code that appears on your phone.',
-        image: './images/phone-01.png',
-        yesLabel: 'Trust',
-        noLabel: 'Distrust',
-      },
-      // Add more objects for each slide
-    ];
 
-    // Generate the swiper slides
-    let slidesHTML = slidesData
-      .map(
-        (slide) => `
-  <div class="swiper-slide">
-    <div class="question-text">
-      ${slide.question}
-    </div>
-    <div class="slide-inner">
-      <img src="${slide.image}" alt="" />
-      <div class="swiper-tinder-label swiper-tinder-label-yes">
-        ${slide.yesLabel}
-      </div>
-      <div class="swiper-tinder-label swiper-tinder-label-no">
-        ${slide.noLabel}
-      </div>
-    </div>
-  </div>
-`,
-      )
-      .join('');
-
-    // Insert the swiper slides into the swiper-wrapper div
-    document.querySelector('.swiper-wrapper').innerHTML = slidesHTML;
-  </script>
   <body>
     <div id="app">
       <!-- Tinder slider -->
       <div class="swiper">
         <div class="swiper-wrapper">
           <div class="swiper-slide">
-            <div class="question-text">
-              Logging into your laptop for the day, a MFA pop-up appears, asking
-              you to input the code that appears on your phone.
-            </div>
             <div class="slide-inner">
-              <img src="./images/phone-01.png" alt="" />
+              <img src="./images/phone-01.jpg" alt="" />
+              <div class="demo-slide-name">
+                Logging into your laptop for the day, a MFA pop-up appears,
+                asking you to input the code that appears on your phone.
+              </div>
               <div class="swiper-tinder-label swiper-tinder-label-yes">
                 Trust
               </div>
@@ -64,67 +27,8 @@
               </div>
             </div>
           </div>
-          <div class="swiper-slide">
-            <div class="question-text">
-              Logging into your laptop for the day, a MFA pop-up appears, asking
-              you to input the code that appears on your phone.
-            </div>
-            <div class="slide-inner">
-              <img src="./images/phone-01.png" alt="" />
-              <div class="swiper-tinder-label swiper-tinder-label-yes">
-                Trust
-              </div>
-              <div class="swiper-tinder-label swiper-tinder-label-no">
-                Distrust
-              </div>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="question-text">
-              Logging into your laptop for the day, a MFA pop-up appears, asking
-              you to input the code that appears on your phone.
-            </div>
-            <div class="slide-inner">
-              <img src="./images/phone-01.png" alt="" />
-              <div class="swiper-tinder-label swiper-tinder-label-yes">
-                Trust
-              </div>
-              <div class="swiper-tinder-label swiper-tinder-label-no">
-                Distrust
-              </div>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="question-text">
-              Logging into your laptop for the day, a MFA pop-up appears, asking
-              you to input the code that appears on your phone.
-            </div>
-            <div class="slide-inner">
-              <img src="./images/phone-01.png" alt="" />
-              <div class="swiper-tinder-label swiper-tinder-label-yes">
-                Trust
-              </div>
-              <div class="swiper-tinder-label swiper-tinder-label-no">
-                Distrust
-              </div>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="question-text">
-              Logging into your laptop for the day, a MFA pop-up appears, asking
-              you to input the code that appears on your phone.
-            </div>
-            <div class="slide-inner">
-              <img src="./images/phone-01.png" alt="" />
-              <div class="swiper-tinder-label swiper-tinder-label-yes">
-                Trust
-              </div>
-              <div class="swiper-tinder-label swiper-tinder-label-no">
-                Distrust
-              </div>
-            </div>
-          </div>
-          <div class="swiper-slide demo-empty-slide">
+
+          <div class="swiper-slide demo-empty-slide answer-slide">
             Here are your results!
           </div>
         </div>
@@ -136,7 +40,7 @@
             viewBox="0 0 256 256"
           >
             <path
-              fill="currentColor"
+              fill="red"
               d="m239.82 157l-12-96A24 24 0 0 0 204 40H32a16 16 0 0 0-16 16v88a16 16 0 0 0 16 16h43.06l37.78 75.58A8 8 0 0 0 120 240a40 40 0 0 0 40-40v-16h56a24 24 0 0 0 23.82-27M72 144H32V56h40Z"
             />
           </svg>
@@ -149,7 +53,7 @@
             viewBox="0 0 256 256"
           >
             <path
-              fill="currentColor"
+              fill="green"
               d="M234 80.12A24 24 0 0 0 216 72h-56V56a40 40 0 0 0-40-40a8 8 0 0 0-7.16 4.42L75.06 96H32a16 16 0 0 0-16 16v88a16 16 0 0 0 16 16h172a24 24 0 0 0 23.82-21l12-96A24 24 0 0 0 234 80.12M32 112h40v88H32Z"
             />
           </svg>
@@ -191,6 +95,16 @@
       });
 
       window.swiper = swiper;
+
+      swiper.on('slideChange', function () {
+        // select the .answer-slide element
+        const answerSlide = document.querySelector('.answer-slide');
+
+        // animate the answer slide to flip using javascript
+
+        answerSlide.classList.add('flip-animate');
+        console.log('slide changed');
+      });
     </script>
   </body>
 </html>
