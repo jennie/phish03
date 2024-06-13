@@ -5,11 +5,11 @@
  *
  * https://uiinitiative.com
  *
- * Copyright 2023 UI Initiative
+ * Copyright 2024 UI Initiative
  *
  * Released under the UI Initiative Regular License
  *
- * October 25, 2023
+ * June 13, 2024
  */
 
 export default function EffectTinder({ swiper, on }) {

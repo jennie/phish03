@@ -3,3 +3,6 @@ node_modules
 www
 www-ssr
 *.local
+
+# Local Netlify folder
+.netlify
