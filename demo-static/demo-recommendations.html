@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" href="../assets/favicon.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+  <link rel="stylesheet" href="../dist/effect-tinder.min.css">
+  <link rel="stylesheet" href="./demo-recommendations.css">
+  <title>Tinder Slider</title>
+</head>
+
+<body>
+  <div id="app">
+    <div class="demo-header">
+      Travel App
+    </div>
+    <div class="demo-content">
+      <div class="demo-title"></div>
+      <div class="demo-block">
+        <div class="demo-text">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+      <div class="demo-title-text">Recommended destinations</div>
+      <div class="demo-block">
+        <!-- Tinder slider -->
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="../assets/images/egypt.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+              <img src="../assets/images/england.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+              <img src="../assets/images/france.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+              <img src="../assets/images/india.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+              <img src="../assets/images/italy.jpg" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="demo-title"></div>
+      <div class="demo-block">
+        <div class="demo-text">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+      <div class="demo-title"></div>
+      <div class="demo-block">
+        <div class="demo-text">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="demo-footer"></div>
+  </div>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="../dist/effect-tinder.min.js"></script>
+  <script>
+  
+
+    const swiper = new Swiper('.swiper', {
+      // pass EffectTinder module to modules
+      modules: [EffectTinder],
+      // specify "tinder" effect
+      effect: 'tinder',
+      grabCursor: true,
+      loop: true,
+    });
+
+    window.swiper = swiper;
+
+  </script>
+</body>
+
+</html>

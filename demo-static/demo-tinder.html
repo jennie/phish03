@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" href="../assets/favicon.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+  <link rel="stylesheet" href="../dist/effect-tinder.min.css">
+  <link rel="stylesheet" href="./demo-tinder.css">
+  <title>Tinder Slider</title>
+</head>
+
+<body>
+  <div id="app">
+    <!-- Tinder slider -->
+    <div class="swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="../assets/images/01.jpg" alt="">
+          <div class="swiper-tinder-label swiper-tinder-label-yes">Like</div>
+          <div class="swiper-tinder-label swiper-tinder-label-no">Nope</div>
+          <div class="demo-slide-name"><b>Sabrina</b>, 23</div>
+        </div>
+        <div class="swiper-slide">
+          <img src="../assets/images/02.jpg" alt="">
+          <div class="swiper-tinder-label swiper-tinder-label-yes">Like</div>
+          <div class="swiper-tinder-label swiper-tinder-label-no">Nope</div>
+          <div class="demo-slide-name"><b>Jane</b>, 32</div>
+        </div>
+        <div class="swiper-slide">
+          <img src="../assets/images/03.jpg" alt="">
+          <div class="swiper-tinder-label swiper-tinder-label-yes">Like</div>
+          <div class="swiper-tinder-label swiper-tinder-label-no">Nope</div>
+          <div class="demo-slide-name"><b>Jessica</b>, 24</div>
+        </div>
+        <div class="swiper-slide">
+          <img src="../assets/images/04.jpg" alt="">
+          <div class="swiper-tinder-label swiper-tinder-label-yes">Like</div>
+          <div class="swiper-tinder-label swiper-tinder-label-no">Nope</div>
+          <div class="demo-slide-name"><b>Kate</b>, 33</div>
+        </div>
+        <div class="swiper-slide">
+          <img src="../assets/images/05.jpg" alt="">
+          <div class="swiper-tinder-label swiper-tinder-label-yes">Like</div>
+          <div class="swiper-tinder-label swiper-tinder-label-no">Nope</div>
+          <div class="demo-slide-name"><b>Helen</b>, 37</div>
+        </div>
+        <div class="swiper-slide demo-empty-slide">
+          There are no more recommendations
+        </div>
+
+      </div>
+      <button class="swiper-tinder-button swiper-tinder-button-no">
+        <svg xmlns="http://www.w3.org/2000/svg" height="48" viewBox="0 -960 960 960" width="48">
+          <path d="m249-207-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z" />
+        </svg>
+      </button>
+      <button class="swiper-tinder-button swiper-tinder-button-yes">
+        <svg xmlns="http://www.w3.org/2000/svg" height="48" viewBox="0 -960 960 960" width="48">
+          <path
+            d="m480-121-41-37q-106-97-175-167.5t-110-126Q113-507 96.5-552T80-643q0-90 60.5-150.5T290-854q57 0 105.5 27t84.5 78q42-54 89-79.5T670-854q89 0 149.5 60.5T880-643q0 46-16.5 91T806-451.5q-41 55.5-110 126T521-158l-41 37Z" />
+        </svg>
+      </button>
+    </div>
+
+
+  </div>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="../dist/effect-tinder.min.js"></script>
+  <script>
+  
+
+    const swiper = new Swiper('.swiper', {
+      // pass EffectTinder module to modules
+      modules: [EffectTinder],
+      // specify "tinder" effect
+      effect: 'tinder',
+      grabCursor: true,
+      // loop is also supported
+      // loop: true,
+    });
+
+    window.swiper = swiper;
+
+  </script>
+</body>
+
+</html>

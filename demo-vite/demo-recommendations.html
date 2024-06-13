@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" href="favicon.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tinder Slider</title>
+</head>
+
+<body>
+  <div id="app">
+    <div class="demo-header">
+      Travel App
+    </div>
+    <div class="demo-content">
+      <div class="demo-title"></div>
+      <div class="demo-block">
+        <div class="demo-text">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+      <div class="demo-title-text">Recommended destinations</div>
+      <div class="demo-block">
+        <!-- Tinder slider -->
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="./images/egypt.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+              <img src="./images/england.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+              <img src="./images/france.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+              <img src="./images/india.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+              <img src="./images/italy.jpg" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="demo-title"></div>
+      <div class="demo-block">
+        <div class="demo-text">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+      <div class="demo-title"></div>
+      <div class="demo-block">
+        <div class="demo-text">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="demo-footer"></div>
+  </div>
+
+  <script type="module">
+    import Swiper from 'swiper';
+    /**
+     * import Tinder effect module
+     */
+    import EffectTinder from './effect-tinder.esm.js';
+    /**
+     * import Swiper core styles
+     */
+    import 'swiper/scss';
+    /**
+     * import Tinder effect styles
+     */
+    import './effect-tinder.scss';
+    /**
+     * Custom local styles
+     */
+    import './demo-recommendations.scss';
+    /**
+     * Init Swiper
+     *
+     */
+
+    const swiper = new Swiper('.swiper', {
+      // pass EffectTinder module to modules
+      modules: [EffectTinder],
+      // specify "tinder" effect
+      effect: 'tinder',
+      grabCursor: true,
+      loop: true,
+    });
+
+    window.swiper = swiper;
+
+  </script>
+</body>
+
+</html>

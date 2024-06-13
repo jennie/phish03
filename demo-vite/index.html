@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tinder Slider</title>
+  </head>
+
+  <body>
+    <div class="demo-nav">
+      <button class="active" data-url="demo-tinder.html">Questions</button>
+      <button data-url="demo-recommendations.html">Results</button>
+    </div>
+    <iframe src="demo-tinder.html" frameborder="0"></iframe>
+    <script type="module">
+      import './index.scss';
+      document.querySelectorAll('button').forEach((el) => {
+        el.addEventListener('click', () => {
+          if (el.classList.contains('active')) return;
+          document
+            .querySelector('iframe')
+            .setAttribute('src', el.getAttribute('data-url'));
+          document.querySelector('button.active').classList.remove('active');
+          el.classList.add('active');
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,52 @@
+html,
+body {
+  position: relative;
+  height: 100%;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+  font-family: -apple-system, system-ui, 'Helvetica Neue', Helvetica, Arial,
+    'Segoe UI', Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.demo-nav {
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #212121;
+  box-sizing: border-box;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+button {
+  appearance: none;
+  cursor: pointer;
+  background: transparent;
+  border: 1px solid #aaa;
+  color: #aaa;
+  height: 32px;
+  font-weight: bold;
+  border-radius: 8px;
+  padding: 0 16px;
+  + button {
+    margin-left: 16px;
+  }
+  &:hover {
+    background: rgba(255, 255, 255, 0.1);
+  }
+  &.active {
+    background: #114df1;
+    border-color: #114df1;
+    color: #fff;
+  }
+}
+iframe {
+  height: 100%;
+  flex-shrink: 10;
+  min-height: 0;
+}

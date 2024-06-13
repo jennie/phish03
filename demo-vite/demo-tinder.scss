@@ -1,0 +1,102 @@
+// import Swiper styles
+html,
+body {
+  position: relative;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: #fff;
+  line-height: 1.5;
+  font-family: -apple-system, system-ui, 'Helvetica Neue', Helvetica, Arial,
+    'Segoe UI', Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+#app {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+@media (min-width: 480px) and (min-height: 480px) {
+  body {
+    background: #121212;
+  }
+  #app {
+    width: 412px;
+    margin: 16px auto;
+    background: #fff;
+    border: 16px solid #000;
+    height: 768px;
+    border-radius: 32px;
+    box-shadow: 0px 0px 0px 1px rgba(255, 255, 255, 0.2);
+  }
+}
+.swiper-tinder {
+  padding: 30px;
+  width: auto;
+  height: 100%;
+  background-color: #eee;
+}
+.question-text {
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  display: flex;
+  margin-bottom: 10px;
+  line-height: 1.5rem;
+  margin: 0 auto 20px auto;
+}
+.slide-inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: solid 5px #ccc;
+  border-radius: 16px;
+  background-color: #fff;
+}
+.swiper-slide {
+  font-size: 18px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: transparent;
+  height: 70%;
+  background-color: #eee;
+
+  // &::before {
+  //   position: absolute;
+  //   left: 0;
+  //   bottom: 0;
+  //   width: 100%;
+  //   height: 50%;
+  //   pointer-events: none;
+  //   content: '';
+  //   background-image: linear-gradient(
+  //     to top,
+  //     rgba(0, 0, 0, 0.95) 25%,
+  //     rgba(0, 0, 0, 0)
+  //   );
+  //   z-index: 10;
+  // }
+}
+
+.demo-empty-slide {
+  background: #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  line-height: 1.5;
+  text-align: center;
+  font-weight: bold;
+  color: #555;
+  text-shadow: 0px 1px 0px #fff;
+
+  &::before {
+    display: none;
+  }
+}
