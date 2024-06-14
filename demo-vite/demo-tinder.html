@@ -97,13 +97,9 @@
       window.swiper = swiper;
 
       swiper.on('slideChange', function () {
-        // select the .answer-slide element
-        const answerSlide = document.querySelector('.answer-slide');
+        const currentSlide = swiper.slides[swiper.activeIndex];
 
-        // animate the answer slide to flip using javascript
-
-        answerSlide.classList.add('flip-animate');
-        console.log('slide changed');
+        console.log('slide changed', currentSlide);
       });
     </script>
   </body>
