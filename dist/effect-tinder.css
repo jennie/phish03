@@ -96,10 +96,12 @@
 .swiper-tinder-button-no svg {
   fill: var(--swiper-tinder-no-color);
 }
-.swiper-tinder-button-no.swiper-tinder-button-active, .swiper-tinder-button-no:active {
+.swiper-tinder-button-no.swiper-tinder-button-active,
+.swiper-tinder-button-no:active {
   background: var(--swiper-tinder-no-color);
 }
-.swiper-tinder-button-no.swiper-tinder-button-active svg, .swiper-tinder-button-no:active svg {
+.swiper-tinder-button-no.swiper-tinder-button-active svg,
+.swiper-tinder-button-no:active svg {
   fill: #fff;
 }
 .swiper-tinder-button-yes {
@@ -109,9 +111,11 @@
 .swiper-tinder-button-yes svg {
   fill: var(--swiper-tinder-yes-color);
 }
-.swiper-tinder-button-yes.swiper-tinder-button-active, .swiper-tinder-button-yes:active {
+.swiper-tinder-button-yes.swiper-tinder-button-active,
+.swiper-tinder-button-yes:active {
   background: var(--swiper-tinder-yes-color);
 }
-.swiper-tinder-button-yes.swiper-tinder-button-active svg, .swiper-tinder-button-yes:active svg {
+.swiper-tinder-button-yes.swiper-tinder-button-active svg,
+.swiper-tinder-button-yes:active svg {
   fill: #fff;
 }
